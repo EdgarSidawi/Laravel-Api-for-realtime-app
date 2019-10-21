@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Model\Question;
 use Illuminate\Http\Request;
 
 class QuestionController extends Controller
@@ -13,17 +14,8 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        // return Question::all();
+        return Question::latest()->get();
     }
 
     /**
@@ -44,17 +36,6 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
     {
         //
     }
