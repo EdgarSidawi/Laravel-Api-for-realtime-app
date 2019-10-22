@@ -69,6 +69,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return response('Category deleted successfully', Response::HTTP_ACCEPTED);
     }
 }
