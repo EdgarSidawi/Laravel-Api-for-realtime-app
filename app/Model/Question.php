@@ -12,6 +12,8 @@ class Question extends Model
         return 'slug';
     }
 
+    protected $guarded = [];
+
     public function user()
     {
         return $this->belongsTo(User::class);
