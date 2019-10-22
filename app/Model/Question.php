@@ -28,4 +28,9 @@ class Question extends Model
     {
         return $this->belongsTo(category::class);
     }
+
+    public function getPathAttribute()
+    {
+        return asset("api/question/$this->slug");
+    }
 }
