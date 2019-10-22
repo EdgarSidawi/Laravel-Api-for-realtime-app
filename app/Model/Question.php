@@ -7,9 +7,14 @@ use App\User;
 
 class Question extends Model
 {
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function user()
     {
-       return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function replies()
