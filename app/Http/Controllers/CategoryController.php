@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Category;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class CategoryController extends Controller
 {
@@ -18,16 +19,6 @@ class CategoryController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -35,7 +26,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Category::create($request->all());
+        $category = new Category;
+        $category->name = $request->name;
+        $category->slug = Str::slug($request->name);
+
+        $category->save();
+
+        return response('Category Created Successfully', Response::HTTP_CREATED);
     }
 
     /**
@@ -45,17 +43,6 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show(Category $category)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Model\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Category $category)
     {
         //
     }
