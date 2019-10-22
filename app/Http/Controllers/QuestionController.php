@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Question;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class QuestionController extends Controller
 {
@@ -27,6 +28,7 @@ class QuestionController extends Controller
     public function store(Request $request)
     {
         Question::create($request->all());
+        return response('Created', Response::HTTP_CREATED);
     }
 
     /**
