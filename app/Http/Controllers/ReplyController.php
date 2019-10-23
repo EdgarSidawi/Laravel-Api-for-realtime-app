@@ -35,9 +35,9 @@ class ReplyController extends Controller
      * @param  \App\Model\Reply  $reply
      * @return \Illuminate\Http\Response
      */
-    public function show(Reply $reply)
+    public function show(Question $question, Reply $reply)
     {
-        //
+        return $reply;
     }
 
     /**
