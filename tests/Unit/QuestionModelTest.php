@@ -54,4 +54,13 @@ class QuestionModelTest extends TestCase
 
         $this->assertInstanceOf(Category::class, $question->category);
     }
+
+    /** @test */
+    public function question_has_many_replies()
+    {
+        $question = factory(Question::class)->create();
+        $replies = factory(Reply::class, 4)->create(['question_id' => $question->id]);
+
+        $this->assertEquals(4, $question->replies->count());
+    }
 }
