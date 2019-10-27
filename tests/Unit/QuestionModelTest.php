@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use App\Model\Question;
+use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -26,5 +27,21 @@ class QuestionModelTest extends TestCase
         $question = factory(Question::class)->create();
 
         $this->assertEquals($question->slug, $question->slug);
+    }
+
+    /** @test */
+    public function question_has_body_attributed()
+    {
+        $question = factory(Question::class)->create();
+
+        $this->assertEquals($question->body, $question->body);
+    }
+
+    /** @test */
+    public function question_belongs_to_a_user()
+    {
+        $question = factory(Question::class)->create();
+
+        $this->assertInstanceOf(User::class, $question->user);
     }
 }
