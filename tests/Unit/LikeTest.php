@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class LikeModelTest extends TestCase
+class LikeTest extends TestCase
 {
     use DatabaseTransactions;
 

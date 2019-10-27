@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Str;
 use Tests\TestCase;
 
-class CategoryModelTest extends TestCase
+class CategoryTest extends TestCase
 {
 
     use DatabaseTransactions;

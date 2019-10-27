@@ -9,7 +9,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
-class UserModelTest extends TestCase
+class UserTest extends TestCase
 {
     use DatabaseTransactions;
 

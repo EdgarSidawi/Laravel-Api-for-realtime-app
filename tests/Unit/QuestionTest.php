@@ -11,7 +11,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
-class QuestionModelTest extends TestCase
+class QuestionTest extends TestCase
 {
     use DatabaseTransactions;
 
