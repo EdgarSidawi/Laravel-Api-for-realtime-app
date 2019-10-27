@@ -2,19 +2,29 @@
 
 namespace Tests\Unit;
 
+use App\User;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class UserModelTest extends TestCase
 {
+    use DatabaseTransactions;
+
     /**
      * A basic unit test example.
-     *
+     * @test
      * @return void
      */
-    public function testExample()
+    public function user_has_name_attribute()
     {
-        $this->assertTrue(true);
+        $user = User::create([
+            'name' => 'foo',
+            'email' => 'me@example.com',
+            'password' => 'password'
+        ]);
+
+        $this->assertEquals('foo', $user->name);
     }
 }
