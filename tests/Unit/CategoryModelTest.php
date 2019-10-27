@@ -26,4 +26,12 @@ class CategoryModelTest extends TestCase
 
         $this->assertEquals('i love laravel', $category->name);
     }
+
+    /** @test */
+    public function saving_a_category_should_save_it_associated_slug()
+    {
+        $category = factory(Category::class)->create();
+
+        $this->assertDatabaseHas('categories', ['slug' => $category->slug]);
+    }
 }
