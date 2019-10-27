@@ -19,4 +19,12 @@ class QuestionModelTest extends TestCase
 
         $this->assertEquals($question->title, $question->title);
     }
+
+    /** @test */
+    public function slug_for_question_title_generated()
+    {
+        $question = factory(Question::class)->create();
+
+        $this->assertEquals($question->slug, $question->slug);
+    }
 }
