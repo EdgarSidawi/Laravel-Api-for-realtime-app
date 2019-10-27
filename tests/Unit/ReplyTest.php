@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Model\Like;
 use App\Model\Question;
 use App\Model\Reply;
 use App\User;
@@ -36,5 +37,14 @@ class ReplyTest extends TestCase
         $reply = factory(Reply::class)->create();
 
         $this->assertInstanceOf(Question::class, $reply->question);
+    }
+
+    /** @test */
+    public function reply_has_many_likes()
+    {
+        $reply = factory(Reply::class)->create();
+        $like = factory(Like::class, 4)->create(['reply_id' => $reply->id]);
+
+        $this->assertEquals(4, $reply->like->count());
     }
 }
