@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Model\Question;
 use App\Model\Reply;
 use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -27,5 +28,13 @@ class ReplyTest extends TestCase
         $reply = factory(Reply::class)->create();
 
         $this->assertInstanceOf(User::class, $reply->user);
+    }
+
+    /** @test */
+    public function reply_belongs_to_a_question()
+    {
+        $reply = factory(Reply::class)->create();
+
+        $this->assertInstanceOf(Question::class, $reply->question);
     }
 }
