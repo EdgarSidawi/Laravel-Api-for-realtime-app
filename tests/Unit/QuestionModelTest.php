@@ -63,4 +63,12 @@ class QuestionModelTest extends TestCase
 
         $this->assertEquals(4, $question->replies->count());
     }
+
+    /** @test */
+    public function question_has_path_attribute()
+    {
+        $question = factory(Question::class)->create();
+
+        $this->assertEquals(asset("api/question/{$question->slug}"), $question->path);
+    }
 }
