@@ -8,13 +8,7 @@ use Tests\TestCase;
 
 class QuestionModelTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
+    /** @test */
+    public function question_has_title_attribute()
+    { }
 }
