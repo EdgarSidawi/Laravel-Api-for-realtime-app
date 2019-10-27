@@ -50,8 +50,21 @@ class UserModelTest extends TestCase
             'password' => 'password'
         ]);
 
-        // dd($user->password);
-
         $this->assertTrue(Hash::check('password', $user->password));
+    }
+
+    /** @test */
+    public function user_can_create_an_account()
+    {
+        User::create([
+            'name' => 'foo',
+            'email' => 'me@example.com',
+            'password' => 'password'
+        ]);
+
+        $this->assertDatabaseHas('users', [
+            'name' => 'foo',
+            'email' => 'me@example.com',
+        ]);
     }
 }
