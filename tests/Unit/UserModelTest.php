@@ -27,4 +27,16 @@ class UserModelTest extends TestCase
 
         $this->assertEquals('foo', $user->name);
     }
+
+    /** @test */
+    public function user_has_email_attribute()
+    {
+        $user = User::create([
+            'name' => 'foo',
+            'email' => 'me@example.com',
+            'password' => 'password'
+        ]);
+
+        $this->assertEquals('meexample.com', $user->email);
+    }
 }
