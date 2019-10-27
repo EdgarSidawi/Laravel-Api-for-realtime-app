@@ -2,7 +2,9 @@
 
 namespace Tests\Unit;
 
+use App\Model\Category;
 use App\Model\Question;
+use App\Model\Reply;
 use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -43,5 +45,13 @@ class QuestionModelTest extends TestCase
         $question = factory(Question::class)->create();
 
         $this->assertInstanceOf(User::class, $question->user);
+    }
+
+    /** @test */
+    public function question_belongs_to_a_category()
+    {
+        $question = factory(Question::class)->create();
+
+        $this->assertInstanceOf(Category::class, $question->category);
     }
 }
