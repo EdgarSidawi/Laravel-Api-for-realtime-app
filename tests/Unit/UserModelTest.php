@@ -6,6 +6,7 @@ use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
 class UserModelTest extends TestCase
@@ -37,6 +38,20 @@ class UserModelTest extends TestCase
             'password' => 'password'
         ]);
 
-        $this->assertEquals('meexample.com', $user->email);
+        $this->assertEquals('me@example.com', $user->email);
+    }
+
+    /** @test */
+    public function user_password_has_hash_attribute()
+    {
+        $user = User::create([
+            'name' => 'foo',
+            'email' => 'me@example.com',
+            'password' => 'password'
+        ]);
+
+        // dd($user->password);
+
+        $this->assertTrue(Hash::check('password', $user->password));
     }
 }
