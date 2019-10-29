@@ -7,11 +7,13 @@ use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 
 class CategoryControllerTest extends TestCase
 {
     use DatabaseTransactions;
+    // use WithoutMiddleware;
 
     /** @test */
     public function user_can_get_all_categories()
@@ -36,16 +38,14 @@ class CategoryControllerTest extends TestCase
     /** @test */
     public function user_can_not_create_category_if_unauthenticated_or_no_token_available()
     {
-        $category = factory(Category::class)->create();
-        $user = factory(User::class)->create();
-
         $data = [
             'id' => 1,
             'name' => 'i love laravel',
             'slug' => 'i-love-laravel'
         ];
         $header = [
-            'Content-Type' => 'application/json'
+            'Content-Type' => 'application/json',
+            'Authorization' => ''
         ];
 
         $response = $this->json('POST', '/api/category', $data, $header);
