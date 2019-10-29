@@ -2,21 +2,27 @@
 
 namespace Tests\Feature;
 
+use App\Model\Question;
+use App\Model\Reply;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 
 class ReplyControllerTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     *
-     * @return void
-     */
-    public function testExample()
+    use DatabaseTransactions;
+    use WithoutMiddleware;
+    /** @test */
+    public function user_can_get_all_replies_to_question()
     {
-        $response = $this->get('/');
+        $question = factory(Question::class)->create();
+        $reply = factory(Reply::class, 10)->create(['question_id' => $question->id]);
 
-        $response->assertStatus(200);
+        $response = $this->json('GET', "api/question/{$question->slug}/reply");
+        // dd($response);
+        $this->assertEquals(10, $question->replies()->count());
+        $response->assertSuccessful()->assertStatus(200);
     }
 }
