@@ -31,4 +31,23 @@ class CategoryControllerTest extends TestCase
         $response->assertSuccessful();
         $response->assertJsonCount(1);
     }
+
+    /** @test */
+    public function user_can_not_create_category_if_unauthenticated_or_no_token_available()
+    {
+        $category = factory(Category::class)->create();
+
+        $data = [
+            'id' => 1,
+            'name' => 'i love laravel',
+            'slug' => 'i-love-laravel'
+        ];
+        $header = [
+            'Content-Type' => 'application/json'
+        ];
+
+        $response = $this->json('POST', '/api/category', $data, $header);
+
+        $response->assertStatus(400);
+    }
 }
