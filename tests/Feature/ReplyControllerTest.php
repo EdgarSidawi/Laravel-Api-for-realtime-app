@@ -13,7 +13,7 @@ use Tests\TestCase;
 class ReplyControllerTest extends TestCase
 {
     use DatabaseTransactions;
-    use WithoutMiddleware;
+
     /** @test */
     public function user_can_get_all_replies_to_question()
     {
@@ -24,5 +24,16 @@ class ReplyControllerTest extends TestCase
         // dd($response);
         $this->assertEquals(10, $question->replies()->count());
         $response->assertSuccessful()->assertStatus(200);
+    }
+
+    /** @test */
+    public function user_can_get_a_reply()
+    {
+        $question = factory(Question::class)->create();
+        $reply = factory(Reply::class)->create();
+
+        $response = $this->json('GET', "/api/question/{$question->slug}/reply/{$reply->id}");
+
+        $response->assertSuccessful()->assertStatus(200)->assertJsonCount(1);
     }
 }
