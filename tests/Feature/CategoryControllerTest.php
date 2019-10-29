@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Model\Category;
-use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -39,7 +38,6 @@ class CategoryControllerTest extends TestCase
     public function user_can_not_create_category_if_unauthenticated_or_no_token_available()
     {
         $data = [
-            'id' => 1,
             'name' => 'i love laravel',
             'slug' => 'i-love-laravel'
         ];

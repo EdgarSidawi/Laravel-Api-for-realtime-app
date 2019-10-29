@@ -6,6 +6,7 @@ use App\Model\Question;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Tests\TestCase;
 
 class QuestionControllerTest extends TestCase
@@ -26,10 +27,28 @@ class QuestionControllerTest extends TestCase
     {
         $question = factory(Question::class)->create();
 
-        $response = $this->json('GET', "/api/question/{$question->slug}");
-
+        $response = $this->json('GET', "api/question/{$question->slug}");
         $response->assertStatus(200);
         $response->assertSuccessful();
         $response->assertJsonCount(1);
+    }
+
+    /** @test */
+    public function user_can_create_question()
+    {
+        $data = [
+            'title' => 'i love laravel',
+            'slug' => 'i-love-laravel',
+            'body' => 'i really do love laravel',
+            'category_id' => 1,
+            'user_id' => 1
+        ];
+        $header = [
+            'Content-Type' => 'application/json',
+            'Authorization' => ''
+        ];
+
+        $response = $this->json('POST', '/api/question', $data);
+        $response->assertStatus(400);
     }
 }
