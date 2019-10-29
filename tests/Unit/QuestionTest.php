@@ -15,7 +15,6 @@ class QuestionTest extends TestCase
 {
     use DatabaseTransactions;
 
-
     /** @test */
     public function question_has_title_attribute()
     {
