@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Model\Category;
+use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -36,6 +37,7 @@ class CategoryControllerTest extends TestCase
     public function user_can_not_create_category_if_unauthenticated_or_no_token_available()
     {
         $category = factory(Category::class)->create();
+        $user = factory(User::class)->create();
 
         $data = [
             'id' => 1,
@@ -47,7 +49,6 @@ class CategoryControllerTest extends TestCase
         ];
 
         $response = $this->json('POST', '/api/category', $data, $header);
-
         $response->assertStatus(400);
     }
 }
