@@ -33,5 +33,6 @@ class LikeTest extends TestCase
         ]);
 
         $this->assertEquals(1, $like->user_id);
+        $this->assertNotEmpty($like->user_id);
     }
 }
