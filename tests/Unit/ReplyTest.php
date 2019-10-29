@@ -21,6 +21,7 @@ class ReplyTest extends TestCase
         $reply = factory(Reply::class)->create();
 
         $this->assertEquals($reply->body, $reply->body);
+        $this->assertNotEmpty($reply->body);
     }
 
     /** @test */
