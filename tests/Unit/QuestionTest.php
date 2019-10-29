@@ -15,6 +15,7 @@ class QuestionTest extends TestCase
 {
     use DatabaseTransactions;
 
+
     /** @test */
     public function question_has_title_attribute()
     {
@@ -37,6 +38,7 @@ class QuestionTest extends TestCase
         $question = factory(Question::class)->create();
 
         $this->assertEquals($question->body, $question->body);
+        $this->assertNotEmpty($question->body);
     }
 
     /** @test */
