@@ -21,6 +21,7 @@ class LikeTest extends TestCase
         ]);
 
         $this->assertEquals(1, $like->reply_id);
+        $this->assertNotEmpty($like->reply_id);
     }
 
     /** @test */
