@@ -30,13 +30,20 @@ class QuestionTest extends TestCase
     }
 
     /** @test */
-    // public function slug_for_question_title_generated()
-    // {
-    //     $question = factory(Question::class)->create();
+    public function slug_for_question_title_generated()
+    {
+        $question = $question = Question::create([
+            'id' => 1,
+            'title' => 'laravel',
+            'slug' => 'laravel',
+            'body' => 'i love laravel',
+            'category_id' => 1,
+            'user_id' => 1,
+        ]);
 
-    //     $this->assertEquals($question->slug, $question->slug);
-    //     $this->assertNotEmpty($question->slug);
-    // }
+        $this->assertNotEmpty($question->slug);
+        $this->assertEquals('laravel', $question->slug);
+    }
 
     /** @test */
     // public function question_has_body_attributed()
