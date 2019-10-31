@@ -16,36 +16,36 @@ class ReplyTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function reply_has_body_attribute()
-    {
-        $reply = factory(Reply::class)->create();
+    // public function reply_has_body_attribute()
+    // {
+    //     $reply = factory(Reply::class)->create();
 
-        $this->assertEquals($reply->body, $reply->body);
-        $this->assertNotEmpty($reply->body);
-    }
-
-    /** @test */
-    public function reply_belongs_to_a_user()
-    {
-        $reply = factory(Reply::class)->create();
-
-        $this->assertInstanceOf(User::class, $reply->user);
-    }
+    //     $this->assertEquals($reply->body, $reply->body);
+    //     $this->assertNotEmpty($reply->body);
+    // }
 
     /** @test */
-    public function reply_belongs_to_a_question()
-    {
-        $reply = factory(Reply::class)->create();
+    // public function reply_belongs_to_a_user()
+    // {
+    //     $reply = factory(Reply::class)->create();
 
-        $this->assertInstanceOf(Question::class, $reply->question);
-    }
+    //     $this->assertInstanceOf(User::class, $reply->user);
+    // }
 
     /** @test */
-    public function reply_has_many_likes()
-    {
-        $reply = factory(Reply::class)->create();
-        $like = factory(Like::class, 4)->create(['reply_id' => $reply->id]);
+    // public function reply_belongs_to_a_question()
+    // {
+    //     $reply = factory(Reply::class)->create();
 
-        $this->assertEquals(4, $reply->like->count());
-    }
+    //     $this->assertInstanceOf(Question::class, $reply->question);
+    // }
+
+    /** @test */
+    // public function reply_has_many_likes()
+    // {
+    //     $reply = factory(Reply::class)->create();
+    //     $like = factory(Like::class, 4)->create(['reply_id' => $reply->id]);
+
+    //     $this->assertEquals(4, $reply->like->count());
+    // }
 }

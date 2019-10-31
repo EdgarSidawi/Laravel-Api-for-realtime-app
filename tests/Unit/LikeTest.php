@@ -13,26 +13,26 @@ class LikeTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    public function like_has_reply_id()
-    {
-        $like = Like::create([
-            'reply_id' => 1,
-            'user_id' => 1
-        ]);
+    // public function like_has_reply_id()
+    // {
+    //     $like = Like::create([
+    //         'reply_id' => 1,
+    //         'user_id' => 1
+    //     ]);
 
-        $this->assertEquals(1, $like->reply_id);
-        $this->assertNotEmpty($like->reply_id);
-    }
+    //     $this->assertEquals(1, $like->reply_id);
+    //     $this->assertNotEmpty($like->reply_id);
+    // }
 
     /** @test */
-    public function like_has_user_id()
-    {
-        $like = Like::create([
-            'reply_id' => 1,
-            'user_id' => 1
-        ]);
+    // public function like_has_user_id()
+    // {
+    //     $like = Like::create([
+    //         'reply_id' => 1,
+    //         'user_id' => 1
+    //     ]);
 
-        $this->assertEquals(1, $like->user_id);
-        $this->assertNotEmpty($like->user_id);
-    }
+    //     $this->assertEquals(1, $like->user_id);
+    //     $this->assertNotEmpty($like->user_id);
+    // }
 }
