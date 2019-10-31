@@ -11,7 +11,7 @@ use Tests\TestCase;
 
 class CategoryControllerTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
     // use WithoutMiddleware;
 
     /** @test */

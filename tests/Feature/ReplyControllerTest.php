@@ -12,7 +12,7 @@ use Tests\TestCase;
 
 class ReplyControllerTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     /** @test */
     public function user_can_get_all_replies_to_question()
