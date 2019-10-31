@@ -8,6 +8,7 @@ use App\Model\Reply;
 use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Str;
 use Tests\TestCase;
 
 class QuestionTest extends TestCase
@@ -32,10 +33,11 @@ class QuestionTest extends TestCase
     /** @test */
     public function slug_for_question_title_generated()
     {
+        $title = 'laravel';
         $question = $question = Question::create([
             'id' => 1,
-            'title' => 'laravel',
-            'slug' => 'laravel',
+            'title' => $title,
+            'slug' => Str::slug($title),
             'body' => 'i love laravel',
             'category_id' => 1,
             'user_id' => 1,
