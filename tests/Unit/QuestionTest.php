@@ -113,18 +113,22 @@ class QuestionTest extends TestCase
             'user_id' => 1,
             'question_id' => $question->id
         ], 4);
-        // $replies = factory(Reply::class, 4)->create([
-        //     'question_id' => $question->id
-        // ]);
-        // dd($replies);
+
         $this->assertEquals(1, $question->replies->count());
     }
 
     /** @test */
-    // public function question_has_path_attribute()
-    // {
-    //     $question = factory(Question::class)->create();
+    public function question_has_path_attribute()
+    {
+        $question = Question::create([
+            'id' => 1,
+            'title' => 'laravel',
+            'slug' => 'laravel',
+            'body' => 'i love laravel',
+            'category_id' => 1,
+            'user_id' => 1,
+        ]);
 
-    //     $this->assertEquals(asset("api/question/{$question->slug}"), $question->path);
-    // }
+        $this->assertEquals(asset("api/question/{$question->slug}"), $question->path);
+    }
 }
