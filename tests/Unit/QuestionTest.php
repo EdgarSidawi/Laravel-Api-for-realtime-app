@@ -6,6 +6,7 @@ use App\Model\Category;
 use App\Model\Question;
 use App\Model\Reply;
 use App\User;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Str;
@@ -63,12 +64,21 @@ class QuestionTest extends TestCase
     }
 
     /** @test */
-    // public function question_belongs_to_a_user()
-    // {
-    //     $question = factory(Question::class)->create();
+    public function question_belongs_to_a_user()
+    {
+        $user = factory(User::class)->create();
 
-    //     $this->assertInstanceOf(User::class, $question->user);
-    // }
+        $question = Question::create([
+            'id' => 1,
+            'title' => 'laravel',
+            'slug' => 'laravel',
+            'body' => 'i love laravel',
+            'category_id' => 1,
+            'user_id' => $user->id,
+        ]);
+
+        $this->assertInstanceOf(User::class, $question->user);
+    }
 
     /** @test */
     // public function question_belongs_to_a_category()
