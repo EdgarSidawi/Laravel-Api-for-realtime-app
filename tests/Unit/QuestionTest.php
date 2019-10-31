@@ -19,59 +19,59 @@ class QuestionTest extends TestCase
     public function question_has_title_attribute()
     {
         $question = factory(Question::class)->create();
-        // dd($question);
+
         $this->assertEquals($question->title, $question->title);
         $this->assertNotEmpty($question->title);
     }
 
     /** @test */
-    // public function slug_for_question_title_generated()
-    // {
-    //     $question = factory(Question::class)->create();
+    public function slug_for_question_title_generated()
+    {
+        $question = factory(Question::class)->create();
 
-    //     $this->assertEquals($question->slug, $question->slug);
-    //     $this->assertNotEmpty($question->slug);
-    // }
-
-    /** @test */
-    // public function question_has_body_attributed()
-    // {
-    //     $question = factory(Question::class)->create();
-
-    //     $this->assertEquals($question->body, $question->body);
-    //     $this->assertNotEmpty($question->body);
-    // }
+        $this->assertEquals($question->slug, $question->slug);
+        $this->assertNotEmpty($question->slug);
+    }
 
     /** @test */
-    // public function question_belongs_to_a_user()
-    // {
-    //     $question = factory(Question::class)->create();
+    public function question_has_body_attributed()
+    {
+        $question = factory(Question::class)->create();
 
-    //     $this->assertInstanceOf(User::class, $question->user);
-    // }
-
-    /** @test */
-    // public function question_belongs_to_a_category()
-    // {
-    //     $question = factory(Question::class)->create();
-
-    //     $this->assertInstanceOf(Category::class, $question->category);
-    // }
+        $this->assertEquals($question->body, $question->body);
+        $this->assertNotEmpty($question->body);
+    }
 
     /** @test */
-    // public function question_has_many_replies()
-    // {
-    //     $question = factory(Question::class)->create();
-    //     $replies = factory(Reply::class, 4)->create(['question_id' => $question->id]);
+    public function question_belongs_to_a_user()
+    {
+        $question = factory(Question::class)->create();
 
-    //     $this->assertEquals(4, $question->replies->count());
-    // }
+        $this->assertInstanceOf(User::class, $question->user);
+    }
 
     /** @test */
-    // public function question_has_path_attribute()
-    // {
-    //     $question = factory(Question::class)->create();
+    public function question_belongs_to_a_category()
+    {
+        $question = factory(Question::class)->create();
 
-    //     $this->assertEquals(asset("api/question/{$question->slug}"), $question->path);
-    // }
+        $this->assertInstanceOf(Category::class, $question->category);
+    }
+
+    /** @test */
+    public function question_has_many_replies()
+    {
+        $question = factory(Question::class)->create();
+        $replies = factory(Reply::class, 4)->create(['question_id' => $question->id]);
+
+        $this->assertEquals(4, $question->replies->count());
+    }
+
+    /** @test */
+    public function question_has_path_attribute()
+    {
+        $question = factory(Question::class)->create();
+
+        $this->assertEquals(asset("api/question/{$question->slug}"), $question->path);
+    }
 }
