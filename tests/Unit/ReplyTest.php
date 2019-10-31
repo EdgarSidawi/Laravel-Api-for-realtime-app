@@ -16,13 +16,14 @@ class ReplyTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    // public function reply_has_body_attribute()
-    // {
-    //     $reply = factory(Reply::class)->create();
+    public function reply_has_body_attribute()
+    {
+        $reply = factory(Reply::class)->create();
+        dd($reply);
 
-    //     $this->assertEquals($reply->body, $reply->body);
-    //     $this->assertNotEmpty($reply->body);
-    // }
+        $this->assertEquals($reply->body, $reply->body);
+        $this->assertNotEmpty($reply->body);
+    }
 
     /** @test */
     // public function reply_belongs_to_a_user()
