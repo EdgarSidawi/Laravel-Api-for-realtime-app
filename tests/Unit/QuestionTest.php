@@ -13,7 +13,7 @@ use Tests\TestCase;
 
 class QuestionTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     /** @test */
     public function question_has_title_attribute()

@@ -13,7 +13,7 @@ use Tests\TestCase;
 
 class ReplyTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     /** @test */
     public function reply_has_body_attribute()

@@ -10,7 +10,7 @@ use Tests\TestCase;
 
 class LikeTest extends TestCase
 {
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     /** @test */
     public function like_has_reply_id()

@@ -12,7 +12,7 @@ use Tests\TestCase;
 class CategoryTest extends TestCase
 {
 
-    use DatabaseTransactions;
+    use RefreshDatabase;
 
     /** @test */
     public function category_has_name_attribute()
