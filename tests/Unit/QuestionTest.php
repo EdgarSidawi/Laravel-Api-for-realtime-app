@@ -16,13 +16,13 @@ class QuestionTest extends TestCase
     use RefreshDatabase;
 
     /** @test */
-    // public function question_has_title_attribute()
-    // {
-    //     $question = factory(Question::class)->create();
-
-    //     $this->assertEquals($question->title, $question->title);
-    //     $this->assertNotEmpty($question->title);
-    // }
+    public function question_has_title_attribute()
+    {
+        $question = factory(Question::class)->create();
+        dd($question);
+        $this->assertEquals($question->title, $question->title);
+        $this->assertNotEmpty($question->title);
+    }
 
     /** @test */
     // public function slug_for_question_title_generated()
