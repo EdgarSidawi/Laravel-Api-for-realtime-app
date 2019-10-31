@@ -48,13 +48,19 @@ class QuestionTest extends TestCase
     }
 
     /** @test */
-    // public function question_has_body_attributed()
-    // {
-    //     $question = factory(Question::class)->create();
-
-    //     $this->assertEquals($question->body, $question->body);
-    //     $this->assertNotEmpty($question->body);
-    // }
+    public function question_has_body_attributed()
+    {
+        $question = $question = Question::create([
+            'id' => 1,
+            'title' => 'laravel',
+            'slug' => 'laravel',
+            'body' => 'i love laravel',
+            'category_id' => 1,
+            'user_id' => 1,
+        ]);
+        $this->assertNotEmpty($question->body);
+        $this->assertEquals('i love laravel', $question->body);
+    }
 
     /** @test */
     // public function question_belongs_to_a_user()
