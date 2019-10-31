@@ -98,13 +98,27 @@ class QuestionTest extends TestCase
     }
 
     /** @test */
-    // public function question_has_many_replies()
-    // {
-    //     $question = factory(Question::class)->create();
-    //     $replies = factory(Reply::class, 4)->create(['question_id' => $question->id]);
-
-    //     $this->assertEquals(4, $question->replies->count());
-    // }
+    public function question_has_many_replies()
+    {
+        $question = Question::create([
+            'id' => 1,
+            'title' => 'laravel',
+            'slug' => 'laravel',
+            'body' => 'i love laravel',
+            'category_id' => 1,
+            'user_id' => 1,
+        ]);
+        $replies = Reply::create([
+            'body' => 'i love laravel',
+            'user_id' => 1,
+            'question_id' => $question->id
+        ], 4);
+        // $replies = factory(Reply::class, 4)->create([
+        //     'question_id' => $question->id
+        // ]);
+        // dd($replies);
+        $this->assertEquals(1, $question->replies->count());
+    }
 
     /** @test */
     // public function question_has_path_attribute()
