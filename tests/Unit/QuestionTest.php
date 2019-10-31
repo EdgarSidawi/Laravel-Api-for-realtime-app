@@ -81,12 +81,21 @@ class QuestionTest extends TestCase
     }
 
     /** @test */
-    // public function question_belongs_to_a_category()
-    // {
-    //     $question = factory(Question::class)->create();
+    public function question_belongs_to_a_category()
+    {
+        $category = factory(Category::class)->create();
 
-    //     $this->assertInstanceOf(Category::class, $question->category);
-    // }
+        $question = Question::create([
+            'id' => 1,
+            'title' => 'laravel',
+            'slug' => 'laravel',
+            'body' => 'i love laravel',
+            'category_id' => $category->id,
+            'user_id' => 1,
+        ]);
+
+        $this->assertInstanceOf(Category::class, $question->category);
+    }
 
     /** @test */
     // public function question_has_many_replies()
