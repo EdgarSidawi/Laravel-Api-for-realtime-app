@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Model\Question;
+use App\User;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -36,7 +37,7 @@ class QuestionControllerTest extends TestCase
     }
 
     /** @test */
-    public function user_can_not_create_question_if_no_token()
+    public function user_can_not_create_question_if_no_token_or_unauthenticated()
     {
         $data = [
             'title' => 'i love laravel',
