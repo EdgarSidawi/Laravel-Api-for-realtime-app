@@ -21,7 +21,7 @@ class QuestionTest extends TestCase
         $question = factory(Question::class)->create();
 
         $this->assertEquals($question->title, $question->title);
-        // $this->assertNotEmpty($question->title);
+        $this->assertNotEmpty($question->title);
     }
 
     /** @test */
