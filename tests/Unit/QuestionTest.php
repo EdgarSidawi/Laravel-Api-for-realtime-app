@@ -72,6 +72,6 @@ class QuestionTest extends TestCase
     {
         $question = factory(Question::class)->create();
 
-        $this->assertEquals("api/question/{$question->slug}", $question->path);
+        $this->assertEquals("/question/{$question->slug}", $question->path);
     }
 }
