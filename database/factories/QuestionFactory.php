@@ -15,11 +15,11 @@ $factory->define(Question::class, function (Faker $faker) {
         'body' => $faker->text,
         'category_id' => function () {
             // return  factory(Category::class)->create()->id;
-            return  factory(Category::class)->rand();
+            return  Category::all()->random();
         },
         'user_id' => function () {
             // return  factory(User::class)->create()->id;
-            return  factory(User::class)->rand();
+            return  User::all()->random();
         }
     ];
 });
