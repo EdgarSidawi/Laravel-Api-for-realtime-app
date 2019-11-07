@@ -4,9 +4,19 @@ namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use App\User;
+use Illuminate\Support\Str;
 
 class Question extends Model
 {
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($question) {
+            $question->slug = Str::slug($question->title);
+        });
+    }
+
     protected $guarded = [];
 
     public function getRouteKeyName()
