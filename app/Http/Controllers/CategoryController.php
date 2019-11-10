@@ -48,7 +48,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return response('Category Created Successfully', Response::HTTP_CREATED);
+        return response(new CategoryResource($category), Response::HTTP_CREATED);
     }
 
     /**
