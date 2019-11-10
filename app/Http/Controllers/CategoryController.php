@@ -83,7 +83,7 @@ class CategoryController extends Controller
 
         $category->save();
 
-        return response('Category Updated Successfully', Response::HTTP_ACCEPTED);
+        return response(new CategoryResource($category), Response::HTTP_ACCEPTED);
     }
 
     /**
