@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\ReplyResource;
 use App\Model\Question;
 use App\Model\Reply;
+use App\Notifications\NewReplyNotification;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -40,6 +41,8 @@ class ReplyController extends Controller
     public function store(Question $question, Request $request)
     {
         $reply = $question->replies()->create($request->all());
+        $user = $question->user;
+        $user->notify(new NewReplyNotification($reply));
         return response(['reply' => new ReplyResource($reply)], Response::HTTP_CREATED);
     }
 

@@ -12,8 +12,6 @@ class NewReplyNotification extends Notification
 {
     use Queueable;
 
-    public $reply;
-
     /**
      * Create a new notification instance.
      *
@@ -44,7 +42,9 @@ class NewReplyNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            'replyBy' => $this->reply->user->name,
+            'question' => $this->reply->question->title,
+            'path' => $this->reply->question->path
         ];
     }
 }
