@@ -13,10 +13,9 @@ Route::post('notifications', function () {
     return [
         'user' => auth()->user(),
         'read' => auth()->user()->readNotifications(),
-        'unread' => auth()->user()->unreadNotifications()
+        'unread' => auth()->user()->unreadNotifications(),
     ];
 });
-
 
 Route::group([
 
