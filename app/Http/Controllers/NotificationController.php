@@ -7,13 +7,16 @@ use Illuminate\Notifications\Notification;
 
 class NotificationController extends Controller
 {
-    public function getNotification()
+    public function index()
     {
-        $user = auth()->user();
-
         return [
-            'read' => $user->readNotifications(),
-            'unread' => $user->unreadNotifications()
+            'read' => auth()->user()->readNotifications,
+            'unread' => auth()->user()->unreadNotifications,
         ];
+    }
+
+    public function markAsRead(Request $request)
+    {
+        auth()->user()->notification->where('id', $request->id)->markAsRead();
     }
 }
