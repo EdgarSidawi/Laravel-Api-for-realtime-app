@@ -11,6 +11,7 @@ Route::delete('/like/{reply}', 'LikeController@unLikeIt');
 
 Route::post('notifications', function () {
     return [
+        'user' => auth()->user(),
         'read' => auth()->user()->readNotifications(),
         'unread' => auth()->user()->unreadNotifications()
     ];
