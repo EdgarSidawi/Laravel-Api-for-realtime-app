@@ -2,6 +2,7 @@
 
 namespace App\Listeners;
 
+use App\Events\LikeEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
@@ -20,10 +21,10 @@ class LikeEventListener
     /**
      * Handle the event.
      *
-     * @param  object  $event
+     * @param  LikeEvent  $event
      * @return void
      */
-    public function handle($event)
+    public function handle(LikeEvent $event)
     {
         //
     }
