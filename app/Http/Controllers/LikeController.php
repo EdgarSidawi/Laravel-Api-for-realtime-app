@@ -23,10 +23,14 @@ class LikeController extends Controller
         $reply->like()->create([
             'user_id' => auth()->id()
         ]);
+
+        broadcast(new ShippingStatusUpdated($reply->id, 1))->toOthers();
     }
 
     public function unLikeIt(Reply $reply)
     {
         $reply->like()->where('user_id', auth()->id())->first()->delete();
+
+        broadcast(new ShippingStatusUpdated($reply->id, 0))->toOthers();
     }
 }
