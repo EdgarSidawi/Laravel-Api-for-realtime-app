@@ -53,8 +53,10 @@ class NewReplyNotification extends Notification
     public function toBroadcast($notifiable)
     {
         return new BroadcastMessage([
-            'invoice_id' => $this->invoice->id,
-            'amount' => $this->invoice->amount,
+            'replyBy' => $this->reply->user->name,
+            'question' => $this->reply->question->title,
+            'path' => $this->reply->question->path,
+            'reply' => $this->reply
         ]);
     }
 }
