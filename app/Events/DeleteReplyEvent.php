@@ -23,7 +23,7 @@ class DeleteReplyEvent implements ShouldBroadcast
      */
     public function __construct($id)
     {
-        $this->$id = $id;
+        $this->id = $id;
     }
 
     /**
