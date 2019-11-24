@@ -11,12 +11,12 @@ $factory->define(Reply::class, function (Faker $faker) {
     return [
         'body' => $faker->text,
         'question_id' => function () {
-            // return factory(Question::class)->create()->id;
-            return Question::all()->random();
+            return factory(Question::class)->create()->id;
+            // return Question::all()->random();
         },
         'user_id' => function () {
-            // return factory(User::class)->create()->id;
-            return User::all()->random();
+            return factory(User::class)->create()->id;
+            // return User::all()->random();
         }
     ];
 });

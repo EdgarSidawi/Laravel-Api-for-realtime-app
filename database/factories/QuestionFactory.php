@@ -14,12 +14,12 @@ $factory->define(Question::class, function (Faker $faker) {
         'slug' => Str::slug($title),
         'body' => $faker->text,
         'category_id' => function () {
-            // return  factory(Category::class)->create()->id;
-            return  Category::all()->random();
+            return  factory(Category::class)->create()->id;
+            // return  Category::all()->random();
         },
         'user_id' => function () {
-            // return  factory(User::class)->create()->id;
-            return  User::all()->random();
+            return  factory(User::class)->create()->id;
+            // return  User::all()->random();
         }
     ];
 });
