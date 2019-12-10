@@ -1,0 +1,569 @@
+[33mcommit fb9df6a7776730b8a6388696719e529438672350[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Tue Dec 10 16:34:03 2019 +0000
+
+    question controller update
+
+[33mcommit d388af2393744a6b989cf1cc4d1c632974893661[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sun Nov 24 12:49:42 2019 +0000
+
+    fixed factory foreign keys
+
+[33mcommit cfc9438a5b908c28e91ecf6d16e82892af5c24c9[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sun Nov 24 12:28:47 2019 +0000
+
+    implement new reply channel
+
+[33mcommit aceaec17216c35635e3477a094169b4e46d1f556[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 23 21:18:56 2019 +0000
+
+    category request added to controller
+
+[33mcommit 6778d4bb5e819a93606a2ac434d294c0e457c32e[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 23 21:17:45 2019 +0000
+
+    category request
+
+[33mcommit 52c483af5149d29615ffdfd3d6855f08cda7d407[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 23 21:16:55 2019 +0000
+
+    added question resource to controller
+
+[33mcommit 12a1b90b1c528a921fb2f84100ba1cec3c77cdf9[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 23 20:58:12 2019 +0000
+
+    question request rules
+
+[33mcommit d22854f3c646af646de6fc6c12620cde33ed5371[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 23 19:24:05 2019 +0000
+
+    question and category request created
+
+[33mcommit 80d555b1783f0ce75befdd5672eecae5bfa52974[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 22 16:21:44 2019 +0000
+
+    exception handler updated
+
+[33mcommit 75fa2444be32430edbe786fe063f13937187db5f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 22 16:16:48 2019 +0000
+
+    jwt middleware added to notification
+
+[33mcommit a907fe2fcbae3a8c32a913d49e86aabc2f99a6d5[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 22 16:14:57 2019 +0000
+
+    delete reply event and controller
+
+[33mcommit 211ba7f43437cba92dfd1f1d29251883519c5328[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 22 15:39:15 2019 +0000
+
+    delete reply construct
+
+[33mcommit 59d0f6a06949e305efc86fa4c1d4157c67efe02b[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 22 15:38:19 2019 +0000
+
+    delete reply broadcast on and shouldbroadcast implemented
+
+[33mcommit 8b9ecd62ac210885caf457bc40c98d59e8fa37de[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 22 15:34:48 2019 +0000
+
+    event generated
+
+[33mcommit cd1c9568a777ce055fbcdda5921a4ca62c2b5a2f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 22 15:34:02 2019 +0000
+
+    added event to eventservice provider
+
+[33mcommit 120e1fef81a6205c93088d867e9a43897aaf123d[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Nov 21 14:43:20 2019 +0000
+
+    notification broadcast
+
+[33mcommit d0b95b30ade3e6cde08f8a1fb2c27fcb7c934991[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Wed Nov 20 22:46:28 2019 +0000
+
+    to broadcast mmethod
+
+[33mcommit b91cf0e84f96df34453efe5c29a5aa8bdc06997b[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Wed Nov 20 22:45:02 2019 +0000
+
+    added broadcast to nreplynotification
+
+[33mcommit 759902e2aa095f392192e9ee1af412d40d69cd14[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Tue Nov 19 21:32:44 2019 +0000
+
+    meta tags
+
+[33mcommit 32d53bb36025ff6064a2154df7fe33b8059de7d5[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 19:43:18 2019 +0000
+
+    socket meta tag added
+
+[33mcommit 07f6e234ca074f8ef049539d3c873b982529d9b2[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 17:40:25 2019 +0000
+
+    new broadcast like event
+
+[33mcommit a8b9857aec59745714014358f61f40b4e2da685f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 17:39:07 2019 +0000
+
+    created broadcast channel in routes
+
+[33mcommit 5256a5a6e957398b8a696a7797a456c4e0ee468b[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 17:36:43 2019 +0000
+
+    like channel
+
+[33mcommit 172ac3a8fc08792174a7856ec47606f719eead16[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 17:35:32 2019 +0000
+
+    like event constructor
+
+[33mcommit 48dbb5564a461ad59ae12bc20ff2f2224fffd83d[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 17:03:59 2019 +0000
+
+    event service provider
+
+[33mcommit f30a53168c2523e6a7cd48d91bbb9b1e3e3f5675[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 17:01:18 2019 +0000
+
+    like event and listeners created
+
+[33mcommit 6c194bdb53bb90f05df9c4d830d2d118bfb7c43d[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 15:26:20 2019 +0000
+
+    broadcast event on like controller
+
+[33mcommit be67ff099f107d650869fa4cbfb7cd549f60c4c2[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 15:15:34 2019 +0000
+
+    uncommented broadcast service provider
+
+[33mcommit aa162c2b76ef9f9a241f175ced2908e25cddff25[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 15:14:39 2019 +0000
+
+    updated bootstrap.js
+
+[33mcommit f75a05c799843b23c3efd71b668085d250830f5a[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 15:10:25 2019 +0000
+
+    laravel echo uncommented in bootstrap
+
+[33mcommit 7060f889edffad0901b3dba63771e00aeb68bb30[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 15:09:50 2019 +0000
+
+    installed laravel echo
+
+[33mcommit 422d297ce66cbb8e46233010fa1ac9f4376e5b37[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 15:03:21 2019 +0000
+
+    pusher installed
+
+[33mcommit cf5b9c1f22ab48cd4e931214405e06b12280372e[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 14:38:34 2019 +0000
+
+    reply controller
+
+[33mcommit f3a33111e12ec27521eb0dab309c8637f0d1f0e0[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 14:10:50 2019 +0000
+
+    reply controller notify update
+
+[33mcommit 99cb2f6bc28549e8f78449a04618adc3e753c2e4[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 13:54:39 2019 +0000
+
+    notification resource collection
+
+[33mcommit 635502b561862b198dc46082bbf944b1d9ac3bcb[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 13:52:42 2019 +0000
+
+    notification resource value
+
+[33mcommit 7dc4d3812b0af73d2bc3d0eadbec115a5b8bb1e4[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 18 13:49:47 2019 +0000
+
+    created notification resource
+
+[33mcommit 753ca37ecfd28953cb8a7d8845c6f3e10fe9f40e[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 16 18:05:23 2019 +0000
+
+    notificationcontroller@markasread fix
+
+[33mcommit 1b8968b839eeda25de4e89491f960ee112fa63fc[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 16 17:58:19 2019 +0000
+
+    notification controller@index
+
+[33mcommit d1727673a21d5b2f948fc9caff7bad3f3da136e6[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 16 17:52:19 2019 +0000
+
+    notification controller
+
+[33mcommit 9a50fcbc916b7b41f04987ac7130641f757aed19[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 16 15:57:39 2019 +0000
+
+    api route notifications
+
+[33mcommit 50bff75aace9844c790219b3fe1f8af4f0f6954f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 20:20:50 2019 +0000
+
+    api route updated
+
+[33mcommit 49c43031a5b387abfe06035dd9543e7da476c3bb[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 20:16:39 2019 +0000
+
+    notification route
+
+[33mcommit 959b9eb3fde5c7d2a1bf8bf7c212ce1fbac12d02[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 19:37:17 2019 +0000
+
+    reply notification update
+
+[33mcommit 186159245bcca8802fce760a3092b33f1ae49b68[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 18:55:45 2019 +0000
+
+    reply notification constructor
+
+[33mcommit a6cc1c256e862ea659eb2ce996140ce458d0ad38[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 18:44:55 2019 +0000
+
+    notification created
+
+[33mcommit 361719aa49a56d94c28bc51e071773abfaf1dc9b[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 18:26:51 2019 +0000
+
+    like controller udpated
+
+[33mcommit 8d61ffc5da236ee978142b20c7f347ededa9c21a[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 18:13:22 2019 +0000
+
+    liked added to reply resourch
+
+[33mcommit c43f606cb7b9a87384617630c4d4cfcfa44cd57f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 15 17:56:23 2019 +0000
+
+    like count to reply resource
+
+[33mcommit 2f177a541ab9c1d5dfbc9a61526cd6d30c07cc7c[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Nov 14 19:11:44 2019 +0000
+
+    returned question slug in reply resource
+
+[33mcommit 85122a485686251c46a70c81a544d6ea404fe277[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Tue Nov 12 12:13:04 2019 +0000
+
+    getting latest from question replies
+
+[33mcommit 571a75e5b3988e6ac5c99b29fe08f35e4ce059d2[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Tue Nov 12 12:08:39 2019 +0000
+
+    boot function for reply
+
+[33mcommit 9867d3013e7d426325807a1a3812cbd744302628[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 11 15:04:30 2019 +0000
+
+    user id to reply resource
+
+[33mcommit db939949f7b949bbdd91ff5d88a77fad75ccec7d[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 11 11:12:44 2019 +0000
+
+    replies count to question model
+
+[33mcommit 83d8d08f0ce924cf0d5b5130d6680f9691a7d267[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 11 11:08:01 2019 +0000
+
+    replies to question resource
+
+[33mcommit 496f493b41f4fdfe2cdb8c545f34088f1dee41c9[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 11 11:06:12 2019 +0000
+
+    with replies to question model
+
+[33mcommit 16a2715846969f418ba99a90c6ba23b743d3e865[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sun Nov 10 16:35:00 2019 +0000
+
+    category controller @update
+
+[33mcommit 8a7f671ac408ced59f5100c21207e3743315746a[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sun Nov 10 15:59:37 2019 +0000
+
+    category store method updated
+
+[33mcommit adec23cae3261d87ded1f3b952ba2920f07b8218[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sun Nov 10 15:05:14 2019 +0000
+
+    category resource update
+
+[33mcommit b9cf91c93e12b29776cdbb023e194ff7e17650c8[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sun Nov 10 15:00:53 2019 +0000
+
+    added slug to category resource
+
+[33mcommit a1701d0c74779ca155619a29439fc609e73c05c2[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 9 15:16:41 2019 +0000
+
+    updated question model
+
+[33mcommit 5e7097d79dde0a48f380011df4fbce1eb9b3546f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 9 13:47:34 2019 +0000
+
+    question slug added to resouce
+
+[33mcommit f57e18e2a0a07017f83af526683094d5158366a5[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Nov 7 16:52:00 2019 +0000
+
+    updated auth controller
+
+[33mcommit 9957ba56321bc556419f7ec63aca50bedf3ded02[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Nov 7 16:33:26 2019 +0000
+
+    updated question resource
+
+[33mcommit 6ed868a9feac3e61e0ca5cdfc65beca38fe9e449[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Nov 7 15:05:10 2019 +0000
+
+    added question resource to response
+
+[33mcommit ac3c54f9050932ae73844c77ef8de40037b0e760[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Nov 7 14:59:07 2019 +0000
+
+    question model boot function
+
+[33mcommit d581539822a9dfbff11e56bdfc4eb9de9e88dcfe[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 20:07:14 2019 +0000
+
+    updated question path attribute
+
+[33mcommit 2bea9a6b704f01b8fd9cdfde6cc79d999b91652e[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 20:00:09 2019 +0000
+
+    edited question path attribute
+
+[33mcommit 2dd8b7cf09395c418140f0245ae6449841203773[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 19:19:57 2019 +0000
+
+    fixed editing error for factory
+
+[33mcommit 8d36d507963f7113b3a21d4ccfbf99c6a35886a4[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 19:18:40 2019 +0000
+
+    edited factory for frontend testing
+
+[33mcommit 6998d11c9b62666fc7e921f0dc4caaa0dfd31d70[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 19:14:20 2019 +0000
+
+    edited factory for frontend testing
+
+[33mcommit 04fcc37f17bd3e76904db94b5c53505dfa2f1fa4[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 18:06:42 2019 +0000
+
+    signup  request
+
+[33mcommit 9e34041a43fb8697979c493f3b5206f6fee85439[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 18:04:30 2019 +0000
+
+    question test
+
+[33mcommit 848c5bcd1a2b1df923afec929b892e2ca7780536[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Mon Nov 4 18:04:03 2019 +0000
+
+    question test update
+
+[33mcommit 8c2dc49da8e096f182a01e75d711650e7da8d3a1[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 2 21:28:44 2019 +0000
+
+    updated authcontroller
+
+[33mcommit 4d8fcdad196de6f9e8e8e8b18865dc9a94c6119f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 2 19:51:38 2019 +0000
+
+    signup request info
+
+[33mcommit 416ae5a845c81f743871f38d15f33bcc75ab6bf7[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Sat Nov 2 19:49:32 2019 +0000
+
+    created signup request
+
+[33mcommit 53fef19b28cf54f3ddcb6843753c4f999e2a2c8d[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 1 16:53:20 2019 +0000
+
+    auth controller returns user name
+
+[33mcommit 590fbc5c1239e77cce1164d2c5d1d4c6e0ab2d96[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 1 10:20:11 2019 +0000
+
+    question controller update
+
+[33mcommit 57249d06ebd13a8bf093ce281ecb74cc1b20f8fa[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Fri Nov 1 09:57:28 2019 +0000
+
+    cors config file added
+
+[33mcommit a2dcf301841d9d26ccd8eb89b4b59a2acbb4a3a5[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 16:09:36 2019 +0000
+
+    fixed question controller test
+
+[33mcommit 40eb8675033e2f27a0569ecae4acd2a3fc7e0bb4[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 16:08:19 2019 +0000
+
+    fixed categorycontroller test
+
+[33mcommit 41c6926f5add0c9c0757eed642b65f503bd2c82f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 15:21:15 2019 +0000
+
+    fixed all unit tests
+
+[33mcommit 9c7d81b27ad9e6489951895640bc56234081d26f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 15:17:26 2019 +0000
+
+    fixed all model factories
+
+[33mcommit f24abff0723a97e424fd82cc65676e66315f7b90[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 15:05:19 2019 +0000
+
+    fixed user test
+
+[33mcommit c9286af4f86a4c933ef412ae4d109eb9dd855a60[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 14:54:46 2019 +0000
+
+    fixed question test for path attribute
+
+[33mcommit 6fa3475a7b9d447dfa48bb34bc02bc8453e1a1ab[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 14:51:40 2019 +0000
+
+    fixed question test for question reply relation
+
+[33mcommit 5045de7185c592dc623a130856f035010b6c6f1c[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 14:04:38 2019 +0000
+
+    fixed question test for question category relationship
+
+[33mcommit db1dec903370571bdb47938c2d00877e1bbcb00e[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 13:53:16 2019 +0000
+
+    fixed question test question user relationship
+
+[33mcommit 9c7e4174553a1cdbafd778607ea479a1dec24276[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 12:57:35 2019 +0000
+
+    fixed question test for body attribute
+
+[33mcommit 9a220e59825769829442334a17611482556e9d26[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 12:54:58 2019 +0000
+
+    created slug for question test
+
+[33mcommit f389f76acf21d69ee4e6553825cb8f772378215f[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 12:52:58 2019 +0000
+
+    fixed question test for slug generated
+
+[33mcommit 16da2168cd477e45e8653641d1e279c3f192d277[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 12:50:36 2019 +0000
+
+    fixed question test for title attribute
+
+[33mcommit 4dcdb641fee61e1591328d7de8f998a3b039ece3[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 11:51:59 2019 +0000
+
+    git repo
+
+[33mcommit 66f6b29dd6d14dfe07f42869ce292fe76b7cc7a2[m
+Author: Edgar Sidawi <romantibuai@gmail.com>
+Date:   Thu Oct 31 10:49:41 2019 +0000
+
+    fixed like model tests

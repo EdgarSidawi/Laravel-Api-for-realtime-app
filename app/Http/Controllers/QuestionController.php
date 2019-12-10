@@ -28,7 +28,7 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {
         // return Question::all();
         return QuestionResource::collection(Question::latest()->get());
     }
